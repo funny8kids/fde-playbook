@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',sans-serif">
+  <rect x="0" y="0" width="760" height="440" fill="#ffffff"/>
+  <text x="380" y="28" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">成本结构与延迟预算：方案里必须算的两笔账</text>
+
+  <!-- left: cost -->
+  <rect x="20" y="46" width="352" height="374" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="196" y="72" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">一次问答的成本拆解（示意比例）</text>
+
+  <text x="40" y="104" font-size="11" fill="#334155">模型输入 Token</text>
+  <rect x="40" y="112" width="250" height="22" rx="4" fill="#2563eb"/>
+  <text x="298" y="128" font-size="11" fill="#2563eb">35%</text>
+
+  <text x="40" y="152" font-size="11" fill="#334155">模型输出 Token</text>
+  <rect x="40" y="160" width="180" height="22" rx="4" fill="#3b82f6"/>
+  <text x="228" y="176" font-size="11" fill="#3b82f6">25%</text>
+
+  <text x="40" y="200" font-size="11" fill="#334155">Embedding + 重排</text>
+  <rect x="40" y="208" width="72" height="22" rx="4" fill="#0d9488"/>
+  <text x="120" y="224" font-size="11" fill="#0d9488">10%</text>
+
+  <text x="40" y="248" font-size="11" fill="#334155">向量库 / 存储 / 带宽</text>
+  <rect x="40" y="256" width="86" height="22" rx="4" fill="#7c3aed"/>
+  <text x="134" y="272" font-size="11" fill="#7c3aed">12%</text>
+
+  <text x="40" y="296" font-size="11" fill="#334155">人力（实施 + 运维摊销）</text>
+  <rect x="40" y="304" width="130" height="22" rx="4" fill="#ea580c"/>
+  <text x="178" y="320" font-size="11" fill="#ea580c">18%</text>
+
+  <rect x="40" y="340" width="312" height="66" rx="8" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="56" y="362" font-size="11" font-weight="bold" fill="#1e40af">月费用 ≈ 日请求数 × 30</text>
+  <text x="56" y="380" font-size="11" fill="#1e40af">×（输入 Token × 单价 + 输出 Token × 单价）</text>
+  <text x="56" y="398" font-size="10" fill="#64748b">再加存储、算力、人力；预留 15–20% 缓冲</text>
+
+  <!-- right: latency -->
+  <rect x="388" y="46" width="352" height="374" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="564" y="72" font-size="13" font-weight="bold" fill="#0f766e" text-anchor="middle">端到端延迟预算（P95 目标 3s）</text>
+
+  <text x="408" y="104" font-size="11" fill="#334155">Query 改写</text>
+  <rect x="408" y="112" width="40" height="20" rx="4" fill="#94a3b8"/>
+  <text x="456" y="127" font-size="10" fill="#64748b">~100ms</text>
+
+  <text x="408" y="148" font-size="11" fill="#334155">Embedding</text>
+  <rect x="408" y="156" width="20" height="20" rx="4" fill="#0d9488"/>
+  <text x="436" y="171" font-size="10" fill="#64748b">~40ms</text>
+
+  <text x="408" y="192" font-size="11" fill="#334155">向量 + BM25 召回</text>
+  <rect x="408" y="200" width="26" height="20" rx="4" fill="#7c3aed"/>
+  <text x="442" y="215" font-size="10" fill="#64748b">~60ms</text>
+
+  <text x="408" y="236" font-size="11" fill="#334155">Re-rank</text>
+  <rect x="408" y="244" width="70" height="20" rx="4" fill="#ea580c"/>
+  <text x="486" y="259" font-size="10" fill="#64748b">~150ms</text>
+
+  <text x="408" y="280" font-size="11" fill="#334155">LLM 首 Token（TTFT）</text>
+  <rect x="408" y="288" width="150" height="20" rx="4" fill="#2563eb"/>
+  <text x="566" y="303" font-size="10" fill="#64748b">~500–800ms</text>
+
+  <text x="408" y="324" font-size="11" fill="#334155">流式生成（感知延迟）</text>
+  <rect x="408" y="332" width="200" height="20" rx="4" fill="#3b82f6"/>
+  <text x="616" y="347" font-size="10" fill="#64748b">首屏后持续输出</text>
+
+  <rect x="408" y="364" width="312" height="44" rx="8" fill="#f0fdfa" stroke="#99f6e4"/>
+  <text x="424" y="384" font-size="11" fill="#0f766e">优化优先级：Re-rank 与 TTFT 是大头</text>
+  <text x="424" y="400" font-size="10" fill="#64748b">流式输出能把「体感等待」砍掉一半以上</text>
+</svg>

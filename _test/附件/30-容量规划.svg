@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',sans-serif">
+  <rect x="0" y="0" width="760" height="450" fill="#ffffff"/>
+  <text x="380" y="28" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">容量规划：从「日活」倒推「要几张卡」</text>
+
+  <!-- formula chain -->
+  <rect x="20" y="46" width="720" height="60" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="40" y="70" font-size="12" font-weight="bold" fill="#1e40af">估算链条</text>
+  <text x="40" y="94" font-size="11" fill="#334155">日活用户 × 人均提问次数 ÷ 集中时段占比 → 峰值 QPS → 单请求耗时 → 并发数 → 卡数</text>
+
+  <!-- example -->
+  <rect x="20" y="120" width="352" height="212" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="196" y="144" font-size="12" font-weight="bold" fill="#334155" text-anchor="middle">算例（内部知识库）</text>
+  <text x="40" y="170" font-size="11" fill="#334155">日活 2,000 人，人均 5 次/天 = 1 万次</text>
+  <text x="40" y="192" font-size="11" fill="#334155">80% 集中在 4 小时内</text>
+  <text x="40" y="214" font-size="11" fill="#334155">峰值 QPS ≈ 10000 × 0.8 ÷ (4×3600) ≈ 0.56</text>
+  <text x="40" y="236" font-size="11" fill="#334155">单请求平均 6 秒（含生成）</text>
+  <text x="40" y="258" font-size="11" fill="#334155">并发 ≈ 0.56 × 6 ≈ 3.4，取 5</text>
+  <text x="40" y="280" font-size="11" fill="#334155">单卡 7B INT4 可承载并发 ≈ 8–12</text>
+  <text x="40" y="302" font-size="11" fill="#15803d">结论：1 张 24GB 卡足够，另备 1 张容灾</text>
+  <text x="40" y="324" font-size="10" fill="#64748b">再按 3 倍增长预留，规划 2–3 卡</text>
+
+  <!-- rules -->
+  <rect x="388" y="120" width="352" height="212" rx="10" fill="#f0fdfa" stroke="#99f6e4"/>
+  <text x="564" y="144" font-size="12" font-weight="bold" fill="#0f766e" text-anchor="middle">四条经验法则</text>
+  <text x="408" y="172" font-size="11" fill="#115e59">① 并发受「显存 × 上下文」限制，不是 CPU</text>
+  <text x="408" y="198" font-size="11" fill="#115e59">② 长上下文请求会吃掉并发名额</text>
+  <text x="408" y="224" font-size="11" fill="#115e59">③ 流式输出降低「体感等待」，不降并发</text>
+  <text x="408" y="250" font-size="11" fill="#115e59">④ 永远留 15–20% 显存与 30% 卡数余量</text>
+  <text x="408" y="282" font-size="10" fill="#0f766e">压测方法：固定并发梯度（1/5/10/20），</text>
+  <text x="408" y="300" font-size="10" fill="#0f766e">记录 P50/P95/P99 与错误率，找拐点。</text>
+  <text x="408" y="322" font-size="10" fill="#64748b">拐点之后加并发只会让所有人更慢。</text>
+
+  <!-- bottom -->
+  <rect x="20" y="348" width="720" height="82" rx="10" fill="#fff7ed" stroke="#fed7aa"/>
+  <text x="40" y="372" font-size="12" font-weight="bold" fill="#9a3412">成本对照（示例假设）</text>
+  <text x="40" y="396" font-size="11" fill="#7c2d12">公有云 API：1 万次/天 × 0.014 元 ≈ 140 元/天 ≈ 5.1 万元/年（不含重排与存储）</text>
+  <text x="40" y="418" font-size="11" fill="#7c2d12">私有化：2 张 24GB 卡（约 8 万元，3 年折旧）+ 电费运维 3 万/年 ≈ 5.7 万元/年 → 拐点就在附近</text>
+</svg>

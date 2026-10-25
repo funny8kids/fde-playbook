@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 520" width="680" height="520" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="a33" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="680" height="520" fill="#fbfcfe"/>
+  <text x="24" y="32" font-size="17" font-weight="700" fill="#1e293b">四种编排拓扑：成本从 1× 到 15×</text>
+  <text x="24" y="52" font-size="11.5" fill="#64748b">能停在①就不要往后走；每升一级，成本与调试难度都成倍上升</text>
+
+  <!-- ① 串行 -->
+  <rect x="24" y="72" width="316" height="128" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+  <text x="40" y="94" font-size="12.5" font-weight="700" fill="#1e293b">① 串行流水线　成本 ≈3×</text>
+  <text x="40" y="112" font-size="10.5" fill="#64748b">适合：文档处理、固定顺序任务</text>
+  <rect x="40" y="124" width="58" height="30" rx="5" fill="#eef2ff" stroke="#c7d2fe"/>
+  <text x="69" y="143" font-size="10.5" fill="#3730a3" text-anchor="middle">抽取</text>
+  <rect x="110" y="124" width="58" height="30" rx="5" fill="#eef2ff" stroke="#c7d2fe"/>
+  <text x="139" y="143" font-size="10.5" fill="#3730a3" text-anchor="middle">校验</text>
+  <rect x="180" y="124" width="58" height="30" rx="5" fill="#eef2ff" stroke="#c7d2fe"/>
+  <text x="209" y="143" font-size="10.5" fill="#3730a3" text-anchor="middle">生成</text>
+  <rect x="250" y="124" width="58" height="30" rx="5" fill="#eef2ff" stroke="#c7d2fe"/>
+  <text x="279" y="143" font-size="10.5" fill="#3730a3" text-anchor="middle">复核</text>
+  <line x1="98" y1="139" x2="108" y2="139" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#a33)"/>
+  <line x1="168" y1="139" x2="178" y2="139" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#a33)"/>
+  <line x1="238" y1="139" x2="248" y2="139" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#a33)"/>
+  <text x="40" y="182" font-size="10.5" fill="#b45309">风险：前一步错误向后传播，必须每步可校验</text>
+
+  <!-- ② 路由 -->
+  <rect x="352" y="72" width="304" height="128" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+  <text x="368" y="94" font-size="12.5" font-weight="700" fill="#1e293b">② 路由 Router　成本 ≈1.1×</text>
+  <text x="368" y="112" font-size="10.5" fill="#64748b">适合：客服分流、意图分类（最常用）</text>
+  <rect x="368" y="140" width="56" height="28" rx="5" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <text x="396" y="158" font-size="10.5" fill="#166534" text-anchor="middle">分类</text>
+  <rect x="470" y="120" width="80" height="24" rx="5" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="510" y="136" font-size="10" fill="#334155" text-anchor="middle">售前问答</text>
+  <rect x="470" y="148" width="80" height="24" rx="5" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="510" y="164" font-size="10" fill="#334155" text-anchor="middle">售后 Agent</text>
+  <rect x="470" y="176" width="80" height="24" rx="5" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="510" y="192" font-size="10" fill="#334155" text-anchor="middle">转人工</text>
+  <line x1="424" y1="152" x2="466" y2="132" stroke="#94a3b8" stroke-width="1" marker-end="url(#a33)"/>
+  <line x1="424" y1="154" x2="466" y2="160" stroke="#94a3b8" stroke-width="1" marker-end="url(#a33)"/>
+  <line x1="424" y1="158" x2="466" y2="188" stroke="#94a3b8" stroke-width="1" marker-end="url(#a33)"/>
+  <text x="560" y="140" font-size="10" fill="#64748b">错判可纠正</text>
+  <text x="560" y="158" font-size="10" fill="#64748b">成本几乎不增</text>
+
+  <!-- ③ 并行汇总 -->
+  <rect x="24" y="216" width="316" height="128" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+  <text x="40" y="238" font-size="12.5" font-weight="700" fill="#1e293b">③ 并行汇总　成本 ≈3–5×</text>
+  <text x="40" y="256" font-size="10.5" fill="#64748b">适合：多视角评审、多文档对比</text>
+  <rect x="40" y="286" width="52" height="26" rx="5" fill="#fffbeb" stroke="#fde68a"/>
+  <text x="66" y="303" font-size="10.5" fill="#92400e" text-anchor="middle">输入</text>
+  <rect x="130" y="266" width="76" height="24" rx="5" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="168" y="282" font-size="10" fill="#334155" text-anchor="middle">法务视角</text>
+  <rect x="130" y="294" width="76" height="24" rx="5" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="168" y="310" font-size="10" fill="#334155" text-anchor="middle">财务视角</text>
+  <rect x="130" y="322" width="76" height="24" rx="5" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="168" y="338" font-size="10" fill="#334155" text-anchor="middle">技术视角</text>
+  <rect x="240" y="286" width="76" height="26" rx="5" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <text x="278" y="303" font-size="10.5" fill="#166534" text-anchor="middle">合并裁决</text>
+  <line x1="92" y1="299" x2="126" y2="278" stroke="#94a3b8" stroke-width="1" marker-end="url(#a33)"/>
+  <line x1="92" y1="299" x2="126" y2="306" stroke="#94a3b8" stroke-width="1" marker-end="url(#a33)"/>
+  <line x1="92" y1="299" x2="126" y2="334" stroke="#94a3b8" stroke-width="1" marker-end="url(#a33)"/>
+  <line x1="206" y1="278" x2="236" y2="294" stroke="#94a3b8" stroke-width="1" marker-end="url(#a33)"/>
+  <line x1="206" y1="306" x2="236" y2="300" stroke="#94a3b8" stroke-width="1" marker-end="url(#a33)"/>
+  <line x1="206" y1="334" x2="236" y2="306" stroke="#94a3b8" stroke-width="1" marker-end="url(#a33)"/>
+
+  <!-- ④ 监督者 -->
+  <rect x="352" y="216" width="304" height="128" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+  <text x="368" y="238" font-size="12.5" font-weight="700" fill="#1e293b">④ 监督者 Supervisor　成本 ≈5–15×</text>
+  <text x="368" y="256" font-size="10.5" fill="#64748b">适合：开放式复杂任务（必须设轮次上限）</text>
+  <rect x="452" y="290" width="96" height="30" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="500" y="310" font-size="11" fill="#991b1b" text-anchor="middle">Supervisor</text>
+  <rect x="380" y="268" width="72" height="22" rx="5" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="416" y="283" font-size="10" fill="#334155" text-anchor="middle">检索员</text>
+  <rect x="380" y="320" width="72" height="22" rx="5" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="416" y="335" font-size="10" fill="#334155" text-anchor="middle">计算员</text>
+  <rect x="548" y="268" width="72" height="22" rx="5" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="584" y="283" font-size="10" fill="#334155" text-anchor="middle">写作者</text>
+  <rect x="548" y="320" width="72" height="22" rx="5" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="584" y="335" font-size="10" fill="#334155" text-anchor="middle">审校员</text>
+  <line x1="452" y1="298" x2="456" y2="283" stroke="#94a3b8" stroke-width="1" marker-end="url(#a33)"/>
+  <line x1="452" y1="310" x2="456" y2="330" stroke="#94a3b8" stroke-width="1" marker-end="url(#a33)"/>
+  <line x1="548" y1="298" x2="544" y2="283" stroke="#94a3b8" stroke-width="1" marker-end="url(#a33)"/>
+  <line x1="548" y1="310" x2="544" y2="330" stroke="#94a3b8" stroke-width="1" marker-end="url(#a33)"/>
+
+  <!-- 状态机硬约束 -->
+  <rect x="24" y="364" width="632" height="102" rx="10" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1.2"/>
+  <text x="40" y="386" font-size="12.5" font-weight="700" fill="#3730a3">任何多角色流程都必须写死的四个上限（写进状态机，不靠模型自觉）</text>
+  <text x="40" y="410" font-size="11" fill="#334155">① 最大循环次数 2–3　　② 单节点 ≤8–16k Token　　③ 整体超时 60–180 s　　④ 工具调用 ≤5–10 次</text>
+  <text x="40" y="434" font-size="11" fill="#334155">交接用结构化 JSON：verdict + confidence + findings（带条款/页码定位）+ need_more_info</text>
+  <text x="40" y="456" font-size="10.5" fill="#b45309">不做这四条，A↔B 互改会无限循环，上下文会膨胀，成本会失控——这是多智能体最常见的死法</text>
+
+  <text x="24" y="496" font-size="10.5" fill="#94a3b8">图 16-1　四种编排拓扑与成本倍数（章号对应正文第 16 章）</text>
+</svg>

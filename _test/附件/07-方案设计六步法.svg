@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 336" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',sans-serif">
+  <rect x="0" y="0" width="760" height="336" fill="#ffffff"/>
+  <text x="380" y="28" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">企业 AI 解决方案设计六步法</text>
+
+  <!-- Step boxes -->
+  <rect x="20" y="60" width="112" height="120" rx="10" fill="#eff6ff" stroke="#93c5fd"/>
+  <circle cx="76" cy="82" r="12" fill="#2563eb"/>
+  <text x="76" y="86" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="76" y="114" font-size="13" font-weight="bold" fill="#1e40af" text-anchor="middle">需求调研</text>
+  <text x="76" y="136" font-size="10" fill="#475569" text-anchor="middle">访谈业务部门</text>
+  <text x="76" y="152" font-size="10" fill="#475569" text-anchor="middle">明确场景与指标</text>
+  <text x="76" y="168" font-size="10" fill="#475569" text-anchor="middle">盘点数据资产</text>
+  <path d="M132 120 L 152 120" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr7)"/>
+
+  <rect x="152" y="60" width="112" height="120" rx="10" fill="#eff6ff" stroke="#93c5fd"/>
+  <circle cx="208" cy="82" r="12" fill="#2563eb"/>
+  <text x="208" y="86" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="208" y="114" font-size="13" font-weight="bold" fill="#1e40af" text-anchor="middle">场景拆解</text>
+  <text x="208" y="136" font-size="10" fill="#475569" text-anchor="middle">判断是否需要 RAG</text>
+  <text x="208" y="152" font-size="10" fill="#475569" text-anchor="middle">是否需要 Agent</text>
+  <text x="208" y="168" font-size="10" fill="#475569" text-anchor="middle">划定边界与兜底</text>
+  <path d="M264 120 L 284 120" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr7)"/>
+
+  <rect x="284" y="60" width="112" height="120" rx="10" fill="#f0fdfa" stroke="#5eead4"/>
+  <circle cx="340" cy="82" r="12" fill="#0d9488"/>
+  <text x="340" y="86" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="340" y="114" font-size="13" font-weight="bold" fill="#0f766e" text-anchor="middle">POC 验证</text>
+  <text x="340" y="136" font-size="10" fill="#475569" text-anchor="middle">小范围真实数据</text>
+  <text x="340" y="152" font-size="10" fill="#475569" text-anchor="middle">验证效果达标</text>
+  <text x="340" y="168" font-size="10" fill="#475569" text-anchor="middle">再决定是否推广</text>
+  <path d="M396 120 L 416 120" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr7)"/>
+
+  <rect x="416" y="60" width="112" height="120" rx="10" fill="#f0fdfa" stroke="#5eead4"/>
+  <circle cx="472" cy="82" r="12" fill="#0d9488"/>
+  <text x="472" y="86" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+  <text x="472" y="114" font-size="13" font-weight="bold" fill="#0f766e" text-anchor="middle">选型定价</text>
+  <text x="472" y="136" font-size="10" fill="#475569" text-anchor="middle">模型能力对比</text>
+  <text x="472" y="152" font-size="10" fill="#475569" text-anchor="middle">公有云 / 私有化</text>
+  <text x="472" y="168" font-size="10" fill="#475569" text-anchor="middle">测算 Token 成本</text>
+  <path d="M528 120 L 548 120" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr7)"/>
+
+  <rect x="548" y="60" width="112" height="120" rx="10" fill="#fff7ed" stroke="#fdba74"/>
+  <circle cx="604" cy="82" r="12" fill="#ea580c"/>
+  <text x="604" y="86" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+  <text x="604" y="114" font-size="13" font-weight="bold" fill="#9a3412" text-anchor="middle">部署实施</text>
+  <text x="604" y="136" font-size="10" fill="#475569" text-anchor="middle">容器化交付</text>
+  <text x="604" y="152" font-size="10" fill="#475569" text-anchor="middle">数据治理先行</text>
+  <text x="604" y="168" font-size="10" fill="#475569" text-anchor="middle">灰度上线</text>
+  <path d="M660 120 L 680 120" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr7)"/>
+
+  <rect x="680" y="60" width="60" height="120" rx="10" fill="#f5f3ff" stroke="#ddd6fe"/>
+  <circle cx="710" cy="82" r="12" fill="#7c3aed"/>
+  <text x="710" y="86" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">6</text>
+  <text x="710" y="114" font-size="13" font-weight="bold" fill="#5b21b6" text-anchor="middle">交付</text>
+  <text x="710" y="136" font-size="10" fill="#475569" text-anchor="middle">培训</text>
+  <text x="710" y="152" font-size="10" fill="#475569" text-anchor="middle">运维</text>
+  <text x="710" y="168" font-size="10" fill="#475569" text-anchor="middle">迭代</text>
+
+  <!-- Bottom: risks -->
+  <rect x="20" y="204" width="720" height="112" rx="10" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="40" y="230" font-size="14" font-weight="bold" fill="#b91c1c">贯穿全程的两件事</text>
+  <rect x="40" y="242" width="340" height="58" rx="8" fill="#ffffff" stroke="#fecaca"/>
+  <text x="56" y="264" font-size="12" font-weight="bold" fill="#7f1d1d">风险评估</text>
+  <text x="56" y="284" font-size="11" fill="#7f1d1d">幻觉风险 / 数据合规 / 供应商锁定 / 预算超支</text>
+  <rect x="400" y="242" width="320" height="58" rx="8" fill="#ffffff" stroke="#fecaca"/>
+  <text x="416" y="264" font-size="12" font-weight="bold" fill="#7f1d1d">效果评估</text>
+  <text x="416" y="284" font-size="11" fill="#7f1d1d">准确率 / 响应时延 / 用户满意度 / Bad Case 率</text>
+
+  <defs>
+    <marker id="arr7" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>

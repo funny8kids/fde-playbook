@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',sans-serif">
+  <rect x="0" y="0" width="760" height="460" fill="#ffffff"/>
+  <text x="380" y="28" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">Agent 一次工具调用的完整时序（Function Calling）</text>
+
+  <!-- lifelines -->
+  <rect x="40" y="48" width="110" height="34" rx="8" fill="#1e293b"/>
+  <text x="95" y="70" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">用户</text>
+  <line x1="95" y1="82" x2="95" y2="420" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+
+  <rect x="200" y="48" width="110" height="34" rx="8" fill="#1d4ed8"/>
+  <text x="255" y="70" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">编排器</text>
+  <line x1="255" y1="82" x2="255" y2="420" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+
+  <rect x="360" y="48" width="110" height="34" rx="8" fill="#7c3aed"/>
+  <text x="415" y="70" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">大模型</text>
+  <line x1="415" y1="82" x2="415" y2="420" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+
+  <rect x="520" y="48" width="110" height="34" rx="8" fill="#ea580c"/>
+  <text x="575" y="70" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">工具网关</text>
+  <line x1="575" y1="82" x2="575" y2="420" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+
+  <rect x="660" y="48" width="80" height="34" rx="8" fill="#0d9488"/>
+  <text x="700" y="70" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">业务系统</text>
+  <line x1="700" y1="82" x2="700" y2="420" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+
+  <!-- messages -->
+  <path d="M95 106 L 255 106" stroke="#1e293b" stroke-width="1.5" marker-end="url(#a15)"/>
+  <text x="100" y="100" font-size="10" fill="#334155">①「帮我查订单 A123 到哪了」</text>
+
+  <path d="M255 136 L 415 136" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#a15)"/>
+  <text x="262" y="130" font-size="10" fill="#1e40af">② 提示词 + 工具清单（JSON Schema）</text>
+
+  <path d="M415 170 L 415 190" stroke="#7c3aed" stroke-width="1.5"/>
+  <rect x="330" y="168" width="0" height="0"/>
+  <text x="424" y="186" font-size="10" fill="#5b21b6">③ 模型输出：</text>
+  <text x="424" y="202" font-size="10" fill="#5b21b6">tool_call{name:"query_order", args:{id:"A123"}}</text>
+
+  <path d="M415 214 L 255 214" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#a15)"/>
+  <text x="300" y="208" font-size="10" fill="#5b21b6">④ 返回结构化调用请求</text>
+
+  <path d="M255 244 L 575 244" stroke="#ea580c" stroke-width="1.5" marker-end="url(#a15)"/>
+  <text x="300" y="238" font-size="10" fill="#9a3412">⑤ 校验参数与权限，执行调用</text>
+
+  <path d="M575 274 L 700 274" stroke="#0d9488" stroke-width="1.5" marker-end="url(#a15)"/>
+  <text x="600" y="268" font-size="10" fill="#0f766e">⑥ 查询</text>
+
+  <path d="M700 304 L 575 304" stroke="#0d9488" stroke-width="1.5" marker-end="url(#a15)" stroke-dasharray="4 3"/>
+  <text x="590" y="298" font-size="10" fill="#0f766e">⑦ 结果</text>
+
+  <path d="M575 330 L 255 330" stroke="#ea580c" stroke-width="1.5" marker-end="url(#a15)" stroke-dasharray="4 3"/>
+  <text x="330" y="324" font-size="10" fill="#9a3412">⑧ 回传 Observation（已脱敏 / 截断）</text>
+
+  <path d="M255 360 L 415 360" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#a15)"/>
+  <text x="262" y="354" font-size="10" fill="#1e40af">⑨ 带着结果再问一次模型</text>
+
+  <path d="M415 392 L 95 392" stroke="#1e293b" stroke-width="1.5" marker-end="url(#a15)" stroke-dasharray="4 3"/>
+  <text x="120" y="386" font-size="10" fill="#334155">⑩ 自然语言回答（可附订单状态卡片）</text>
+
+  <rect x="20" y="420" width="720" height="30" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="380" y="440" font-size="11" fill="#b91c1c" text-anchor="middle">关键控制点：⑤ 的权限校验、⑧ 的脱敏截断、⑩ 的高风险动作人工确认</text>
+
+  <defs>
+    <marker id="a15" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 520" width="680" height="520" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="a36" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="680" height="520" fill="#fbfcfe"/>
+  <text x="24" y="32" font-size="17" font-weight="700" fill="#1e293b">知识运营闭环：上线只是第 0 天</text>
+  <text x="24" y="52" font-size="11.5" fill="#64748b">六个环节缺一个，系统会在 3–6 个月内自然死亡（效果衰减曲线）</text>
+
+  <!-- 中心 -->
+  <circle cx="340" cy="270" r="62" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.6"/>
+  <text x="340" y="258" font-size="13" font-weight="700" fill="#3730a3" text-anchor="middle">知识资产</text>
+  <text x="340" y="278" font-size="13" font-weight="700" fill="#3730a3" text-anchor="middle">持续增值</text>
+  <text x="340" y="298" font-size="10" fill="#4338ca" text-anchor="middle">or 持续腐烂</text>
+
+  <!-- 六节点 -->
+  <!-- 1 采集 -->
+  <rect x="248" y="86" width="184" height="52" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="340" y="106" font-size="12" font-weight="700" fill="#1e293b" text-anchor="middle">① 盘点与采集</text>
+  <text x="340" y="124" font-size="10" fill="#64748b" text-anchor="middle">九字段资产表 + 指定 Owner</text>
+
+  <!-- 2 审核 -->
+  <rect x="482" y="150" width="176" height="62" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="570" y="170" font-size="12" font-weight="700" fill="#1e293b" text-anchor="middle">② 三审入库</text>
+  <text x="570" y="188" font-size="10" fill="#64748b" text-anchor="middle">机器 ≥98% → 业务 → 抽检 30 份</text>
+  <text x="570" y="203" font-size="10" fill="#64748b" text-anchor="middle">重复率 ≤2%</text>
+
+  <!-- 3 使用 -->
+  <rect x="482" y="330" width="176" height="62" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="570" y="350" font-size="12" font-weight="700" fill="#1e293b" text-anchor="middle">③ 使用与引用</text>
+  <text x="570" y="368" font-size="10" fill="#64748b" text-anchor="middle">答案带出处 + 转人工入口</text>
+  <text x="570" y="383" font-size="10" fill="#64748b" text-anchor="middle">埋点：复制 / 点开引用 / 追问</text>
+
+  <!-- 4 反馈 -->
+  <rect x="248" y="402" width="184" height="62" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="340" y="422" font-size="12" font-weight="700" fill="#1e293b" text-anchor="middle">④ 反馈采集</text>
+  <text x="340" y="440" font-size="10" fill="#64748b" text-anchor="middle">点踩 + 纠错 + 转人工原因</text>
+  <text x="340" y="455" font-size="10" fill="#64748b" text-anchor="middle">追问率是隐藏的质量指标</text>
+
+  <!-- 5 缺口 -->
+  <rect x="22" y="330" width="176" height="62" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="110" y="350" font-size="12" font-weight="700" fill="#1e293b" text-anchor="middle">⑤ 缺口分析</text>
+  <text x="110" y="368" font-size="10" fill="#64748b" text-anchor="middle">Top 无答案问题 20 条聚类</text>
+  <text x="110" y="383" font-size="10" fill="#b45309" text-anchor="middle">这份清单就是运营的需求文档</text>
+
+  <!-- 6 更新/过期 -->
+  <rect x="22" y="150" width="176" height="62" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="110" y="170" font-size="12" font-weight="700" fill="#1e293b" text-anchor="middle">⑥ 更新与过期</text>
+  <text x="110" y="188" font-size="10" fill="#64748b" text-anchor="middle">expire_at + 降权 50% + 标注</text>
+  <text x="110" y="203" font-size="10" fill="#b45309" text-anchor="middle">软过期，不硬删</text>
+
+  <!-- 箭头环 -->
+  <line x1="340" y1="138" x2="512" y2="146" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#a36)"/>
+  <line x1="570" y1="212" x2="570" y2="326" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#a36)"/>
+  <line x1="512" y1="394" x2="436" y2="420" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#a36)"/>
+  <line x1="248" y1="424" x2="202" y2="392" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#a36)"/>
+  <line x1="110" y1="330" x2="110" y2="216" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#a36)"/>
+  <line x1="198" y1="176" x2="244" y2="128" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#a36)"/>
+
+  <!-- 中心连线 -->
+  <line x1="340" y1="208" x2="340" y2="140" stroke="#c7d2fe" stroke-width="1"/>
+  <line x1="402" y1="270" x2="478" y2="270" stroke="#c7d2fe" stroke-width="1"/>
+  <line x1="340" y1="332" x2="340" y2="400" stroke="#c7d2fe" stroke-width="1"/>
+  <line x1="278" y1="270" x2="202" y2="270" stroke="#c7d2fe" stroke-width="1"/>
+
+  <!-- 底部节奏 -->
+  <rect x="248" y="248" width="184" height="0" fill="none"/>
+  <text x="340" y="500" font-size="10.5" fill="#94a3b8" text-anchor="middle">图 26-1　知识运营闭环与节奏（日看拒答 · 周 30 分钟会 · 月复盘抽检 · 季升级回归）</text>
+</svg>

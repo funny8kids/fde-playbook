@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',sans-serif">
+  <rect x="0" y="0" width="760" height="470" fill="#ffffff"/>
+  <text x="380" y="28" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">文档解析流水线：RAG 效果的隐形天花板</text>
+
+  <!-- 输入 -->
+  <rect x="20" y="48" width="720" height="56" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="36" y="72" font-size="12" font-weight="bold" fill="#475569">原始材料</text>
+  <text x="120" y="72" font-size="11" fill="#334155">PDF（原生/扫描）· Word · Excel · PPT · 网页 · 图片 · 代码仓库 · 数据库</text>
+  <text x="120" y="92" font-size="10" fill="#64748b">先做抽样：随机 30 份，人工看解析结果，估算错字率与结构丢失率</text>
+
+  <!-- pipeline -->
+  <rect x="20" y="116" width="720" height="120" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="36" y="140" font-size="12" font-weight="bold" fill="#1e40af">解析流水线</text>
+
+  <rect x="40" y="150" width="120" height="68" rx="8" fill="#ffffff" stroke="#93c5fd"/>
+  <text x="100" y="174" font-size="11" font-weight="bold" fill="#1e40af" text-anchor="middle">版面分析</text>
+  <text x="100" y="192" font-size="10" fill="#64748b" text-anchor="middle">分栏/表格/页眉</text>
+  <text x="100" y="208" font-size="10" fill="#64748b" text-anchor="middle">识别区块类型</text>
+  <path d="M160 184 L 178 184" stroke="#64748b" stroke-width="1.5" marker-end="url(#a24)"/>
+
+  <rect x="178" y="150" width="120" height="68" rx="8" fill="#ffffff" stroke="#93c5fd"/>
+  <text x="238" y="174" font-size="11" font-weight="bold" fill="#1e40af" text-anchor="middle">OCR / 抽取</text>
+  <text x="238" y="192" font-size="10" fill="#64748b" text-anchor="middle">扫描件转文字</text>
+  <text x="238" y="208" font-size="10" fill="#64748b" text-anchor="middle">保留坐标与页码</text>
+  <path d="M298 184 L 316 184" stroke="#64748b" stroke-width="1.5" marker-end="url(#a24)"/>
+
+  <rect x="316" y="150" width="120" height="68" rx="8" fill="#ffffff" stroke="#93c5fd"/>
+  <text x="376" y="174" font-size="11" font-weight="bold" fill="#1e40af" text-anchor="middle">结构还原</text>
+  <text x="376" y="192" font-size="10" fill="#64748b" text-anchor="middle">标题层级/列表</text>
+  <text x="376" y="208" font-size="10" fill="#64748b" text-anchor="middle">表格转 Markdown</text>
+  <path d="M436 184 L 454 184" stroke="#64748b" stroke-width="1.5" marker-end="url(#a24)"/>
+
+  <rect x="454" y="150" width="120" height="68" rx="8" fill="#ffffff" stroke="#93c5fd"/>
+  <text x="514" y="174" font-size="11" font-weight="bold" fill="#1e40af" text-anchor="middle">清洗规范化</text>
+  <text x="514" y="192" font-size="10" fill="#64748b" text-anchor="middle">合并断行/去重</text>
+  <text x="514" y="208" font-size="10" fill="#64748b" text-anchor="middle">统一全半角与单位</text>
+  <path d="M574 184 L 592 184" stroke="#64748b" stroke-width="1.5" marker-end="url(#a24)"/>
+
+  <rect x="592" y="150" width="128" height="68" rx="8" fill="#1d4ed8"/>
+  <text x="656" y="174" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">质量抽检</text>
+  <text x="656" y="192" font-size="10" fill="#dbeafe" text-anchor="middle">错字率/结构完整</text>
+  <text x="656" y="208" font-size="10" fill="#dbeafe" text-anchor="middle">不合格返工</text>
+
+  <!-- 四类难点 -->
+  <rect x="20" y="248" width="352" height="104" rx="10" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="40" y="272" font-size="12" font-weight="bold" fill="#b91c1c">坑 1：扫描件与低质影印</text>
+  <text x="40" y="294" font-size="11" fill="#7f1d1d">OCR 错字率 5–10%，数字与型号最容易错。</text>
+  <text x="40" y="314" font-size="11" fill="#7f1d1d">对策：关键文档人工校对 + 建立错字替换表 +</text>
+  <text x="40" y="334" font-size="11" fill="#7f1d1d">入库时保留页码坐标，便于回查原图。</text>
+
+  <rect x="388" y="248" width="352" height="104" rx="10" fill="#fff7ed" stroke="#fed7aa"/>
+  <text x="408" y="272" font-size="12" font-weight="bold" fill="#9a3412">坑 2：表格与合并单元格</text>
+  <text x="408" y="294" font-size="11" fill="#7c2d12">按字数切分会把表格打碎成乱码。</text>
+  <text x="408" y="314" font-size="11" fill="#7c2d12">对策：整表转 Markdown 或「字段: 值」文本，</text>
+  <text x="408" y="334" font-size="11" fill="#7c2d12">表头随每一行一起入块，保证语义完整。</text>
+
+  <rect x="20" y="360" width="352" height="90" rx="10" fill="#f5f3ff" stroke="#ddd6fe"/>
+  <text x="40" y="384" font-size="12" font-weight="bold" fill="#5b21b6">坑 3：多栏排版与页眉页脚</text>
+  <text x="40" y="406" font-size="11" fill="#4c1d95">双栏 PDF 直接按行抽取会串行。</text>
+  <text x="40" y="426" font-size="11" fill="#4c1d95">对策：版面分析按区块排序，剔除页眉页脚与页码。</text>
+
+  <rect x="388" y="360" width="352" height="90" rx="10" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <text x="408" y="384" font-size="12" font-weight="bold" fill="#15803d">坑 4：版本与重复</text>
+  <text x="408" y="406" font-size="11" fill="#14532d">同一制度 3 个版本同时入库 → 答案打架。</text>
+  <text x="408" y="426" font-size="11" fill="#14532d">对策：hash 去重 + 生效日期 + 旧版下线。</text>
+
+  <defs>
+    <marker id="a24" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>

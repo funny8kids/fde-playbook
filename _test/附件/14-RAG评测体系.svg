@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',sans-serif">
+  <rect x="0" y="0" width="760" height="440" fill="#ffffff"/>
+  <text x="380" y="28" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">RAG 评测体系：四个指标定位问题出在哪一环</text>
+
+  <!-- funnel: question -> retrieval -> generation -->
+  <rect x="20" y="48" width="720" height="120" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="40" y="72" font-size="12" font-weight="bold" fill="#475569">评测分两段：先看「找得对不对」，再看「答得好不好」</text>
+
+  <rect x="40" y="86" width="200" height="66" rx="8" fill="#eff6ff" stroke="#93c5fd"/>
+  <text x="140" y="110" font-size="12" font-weight="bold" fill="#1e40af" text-anchor="middle">检索段</text>
+  <text x="140" y="130" font-size="10" fill="#334155" text-anchor="middle">Context Recall</text>
+  <text x="140" y="146" font-size="10" fill="#334155" text-anchor="middle">Context Precision</text>
+
+  <path d="M240 119 L 270 119" stroke="#64748b" stroke-width="1.5" marker-end="url(#a14)"/>
+  <rect x="270" y="86" width="200" height="66" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="370" y="110" font-size="12" font-weight="bold" fill="#9a3412" text-anchor="middle">生成段</text>
+  <text x="370" y="130" font-size="10" fill="#334155" text-anchor="middle">Faithfulness</text>
+  <text x="370" y="146" font-size="10" fill="#334155" text-anchor="middle">Answer Relevancy</text>
+
+  <path d="M470 119 L 500 119" stroke="#64748b" stroke-width="1.5" marker-end="url(#a14)"/>
+  <rect x="500" y="86" width="220" height="66" rx="8" fill="#f0fdf4" stroke="#86efac"/>
+  <text x="610" y="110" font-size="12" font-weight="bold" fill="#15803d" text-anchor="middle">业务段</text>
+  <text x="610" y="130" font-size="10" fill="#334155" text-anchor="middle">一次解决率 / 满意度</text>
+  <text x="610" y="146" font-size="10" fill="#334155" text-anchor="middle">时延 / 成本</text>
+
+  <!-- metric cards -->
+  <rect x="20" y="184" width="172" height="150" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="106" y="208" font-size="12" font-weight="bold" fill="#1e40af" text-anchor="middle">Context Recall</text>
+  <text x="106" y="232" font-size="11" fill="#334155" text-anchor="middle">该找到的找到了吗</text>
+  <text x="106" y="256" font-size="10" fill="#64748b" text-anchor="middle">偏低 → 分块/Embedding</text>
+  <text x="106" y="272" font-size="10" fill="#64748b" text-anchor="middle">/查询改写有问题</text>
+  <text x="106" y="300" font-size="10" fill="#1e40af" text-anchor="middle">目标：≥ 0.85</text>
+  <text x="106" y="320" font-size="10" fill="#94a3b8" text-anchor="middle">漏检 = 后面全错</text>
+
+  <rect x="204" y="184" width="172" height="150" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="290" y="208" font-size="12" font-weight="bold" fill="#1e40af" text-anchor="middle">Context Precision</text>
+  <text x="290" y="232" font-size="11" fill="#334155" text-anchor="middle">找到的有用吗</text>
+  <text x="290" y="256" font-size="10" fill="#64748b" text-anchor="middle">偏低 → 噪声多</text>
+  <text x="290" y="272" font-size="10" fill="#64748b" text-anchor="middle">需加 Re-rank</text>
+  <text x="290" y="300" font-size="10" fill="#1e40af" text-anchor="middle">目标：≥ 0.75</text>
+  <text x="290" y="320" font-size="10" fill="#94a3b8" text-anchor="middle">噪声 = 成本与幻觉</text>
+
+  <rect x="388" y="184" width="172" height="150" rx="10" fill="#fff7ed" stroke="#fed7aa"/>
+  <text x="474" y="208" font-size="12" font-weight="bold" fill="#9a3412" text-anchor="middle">Faithfulness</text>
+  <text x="474" y="232" font-size="11" fill="#334155" text-anchor="middle">回答忠于资料吗</text>
+  <text x="474" y="256" font-size="10" fill="#64748b" text-anchor="middle">偏低 → 幻觉</text>
+  <text x="474" y="272" font-size="10" fill="#64748b" text-anchor="middle">收紧提示词与温度</text>
+  <text x="474" y="300" font-size="10" fill="#9a3412" text-anchor="middle">目标：≥ 0.90</text>
+  <text x="474" y="320" font-size="10" fill="#94a3b8" text-anchor="middle">企业最看重的一项</text>
+
+  <rect x="572" y="184" width="168" height="150" rx="10" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <text x="656" y="208" font-size="12" font-weight="bold" fill="#15803d" text-anchor="middle">Answer Relevancy</text>
+  <text x="656" y="232" font-size="11" fill="#334155" text-anchor="middle">回答切题吗</text>
+  <text x="656" y="256" font-size="10" fill="#64748b" text-anchor="middle">偏低 → 提示词含糊</text>
+  <text x="656" y="272" font-size="10" fill="#64748b" text-anchor="middle">或检索跑偏</text>
+  <text x="656" y="300" font-size="10" fill="#15803d" text-anchor="middle">目标：≥ 0.85</text>
+  <text x="656" y="320" font-size="10" fill="#94a3b8" text-anchor="middle">用户体感最直接</text>
+
+  <!-- workflow -->
+  <rect x="20" y="348" width="720" height="72" rx="10" fill="#f5f3ff" stroke="#ddd6fe"/>
+  <text x="40" y="372" font-size="12" font-weight="bold" fill="#5b21b6">跑一次评测的闭环</text>
+  <text x="40" y="400" font-size="11" fill="#334155">建黄金集（100–300 条真实问题 + 标准答案）→ 跑批 → 出四指标 → 定位薄弱环节 → 只改一个变量 → 回归对比 → 记录版本</text>
+  <text x="40" y="416" font-size="10" fill="#64748b">纪律：一次只改一个变量，否则无法归因</text>
+
+  <defs>
+    <marker id="a14" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>
