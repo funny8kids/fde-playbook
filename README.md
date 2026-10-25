@@ -175,6 +175,19 @@ git clone https://github.com/funny8kids/fde-playbook.git
 
 ---
 
+## 维护
+
+这个仓库是 Obsidian 版原稿的「发布镜像」，内容由脚本生成，保证两边不跑偏：
+
+```bash
+python tools/build.py --src /path/to/FDE全书 --out .
+```
+
+脚本做四件事：`[[双链]]` → 相对路径 Markdown 链接（含锚点）、去掉 YAML frontmatter、
+Obsidian callout → GitHub alert、可折叠块（`-`/`+`）→ `<details>`，最后校验断链。
+
+---
+
 ## 一些说明
 
 - 案例中的企业、数字、指标均为**脱敏与合成**，用于说明方法，不代表任何真实客户。
