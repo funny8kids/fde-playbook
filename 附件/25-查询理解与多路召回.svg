@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',sans-serif">
+  <rect x="0" y="0" width="760" height="450" fill="#ffffff"/>
+  <text x="380" y="28" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">查询理解与多路召回：把「找不到」变成「找得准」</text>
+
+  <rect x="20" y="48" width="720" height="46" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="36" y="76" font-size="12" fill="#334155">用户原话：「上次那个报销的流程怎么走？就是出差回来那个」</text>
+
+  <!-- step 1 -->
+  <rect x="20" y="108" width="720" height="96" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="36" y="132" font-size="12" font-weight="bold" fill="#1e40af">① 查询理解（把口语变检索友好）</text>
+  <rect x="40" y="142" width="150" height="50" rx="6" fill="#ffffff" stroke="#93c5fd"/>
+  <text x="115" y="162" font-size="10" font-weight="bold" fill="#1e40af" text-anchor="middle">指代消解</text>
+  <text x="115" y="180" font-size="9" fill="#64748b" text-anchor="middle">「那个」→ 差旅报销</text>
+  <rect x="202" y="142" width="150" height="50" rx="6" fill="#ffffff" stroke="#93c5fd"/>
+  <text x="277" y="162" font-size="10" font-weight="bold" fill="#1e40af" text-anchor="middle">意图识别</text>
+  <text x="277" y="180" font-size="9" fill="#64748b" text-anchor="middle">流程查询（非闲聊）</text>
+  <rect x="364" y="142" width="150" height="50" rx="6" fill="#ffffff" stroke="#93c5fd"/>
+  <text x="439" y="162" font-size="10" font-weight="bold" fill="#1e40af" text-anchor="middle">关键词扩写</text>
+  <text x="439" y="180" font-size="9" fill="#64748b" text-anchor="middle">差旅/报销/流程/审批</text>
+  <rect x="526" y="142" width="194" height="50" rx="6" fill="#ffffff" stroke="#93c5fd"/>
+  <text x="623" y="162" font-size="10" font-weight="bold" fill="#1e40af" text-anchor="middle">结构化约束提取</text>
+  <text x="623" y="180" font-size="9" fill="#64748b" text-anchor="middle">部门=财务？时间=现行版本</text>
+
+  <!-- step 2 -->
+  <rect x="20" y="216" width="720" height="106" rx="10" fill="#f0fdfa" stroke="#99f6e4"/>
+  <text x="36" y="240" font-size="12" font-weight="bold" fill="#0f766e">② 四路召回并行（每路 30–50 条）</text>
+  <rect x="40" y="250" width="160" height="58" rx="6" fill="#ffffff" stroke="#5eead4"/>
+  <text x="120" y="272" font-size="10" font-weight="bold" fill="#0f766e" text-anchor="middle">稠密向量</text>
+  <text x="120" y="290" font-size="9" fill="#64748b" text-anchor="middle">语义相似</text>
+  <rect x="212" y="250" width="160" height="58" rx="6" fill="#ffffff" stroke="#5eead4"/>
+  <text x="292" y="272" font-size="10" font-weight="bold" fill="#0f766e" text-anchor="middle">BM25 稀疏</text>
+  <text x="292" y="290" font-size="9" fill="#64748b" text-anchor="middle">字面精确</text>
+  <rect x="384" y="250" width="160" height="58" rx="6" fill="#ffffff" stroke="#5eead4"/>
+  <text x="464" y="272" font-size="10" font-weight="bold" fill="#0f766e" text-anchor="middle">标题/条号匹配</text>
+  <text x="464" y="290" font-size="9" fill="#64748b" text-anchor="middle">结构化字段</text>
+  <rect x="556" y="250" width="164" height="58" rx="6" fill="#ffffff" stroke="#5eead4"/>
+  <text x="638" y="272" font-size="10" font-weight="bold" fill="#0f766e" text-anchor="middle">FAQ 直命中</text>
+  <text x="638" y="290" font-size="9" fill="#64748b" text-anchor="middle">高频问题缓存</text>
+
+  <!-- step 3 -->
+  <rect x="20" y="334" width="720" height="52" rx="10" fill="#f5f3ff" stroke="#ddd6fe"/>
+  <text x="36" y="358" font-size="12" font-weight="bold" fill="#5b21b6">③ 融合去重（RRF）→ ④ 交叉编码器重排 → ⑤ 阈值过滤</text>
+  <text x="36" y="378" font-size="10" fill="#64748b">低于阈值直接拒答；通过则取 Top3–5，附页码与条款号注入提示词</text>
+
+  <rect x="20" y="396" width="720" height="42" rx="8" fill="#fffbeb" stroke="#fde68a"/>
+  <text x="380" y="422" font-size="11" font-weight="bold" fill="#92400e" text-anchor="middle">经验：指代消解 + 关键词扩写解决约 70% 的召回问题，成本极低，应优先做</text>
+</svg>

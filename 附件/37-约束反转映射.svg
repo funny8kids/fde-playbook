@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 540" width="680" height="540" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="a37" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="680" height="540" fill="#fbfcfe"/>
+  <text x="24" y="32" font-size="17" font-weight="700" fill="#1e293b">约束 → 设计反转：案例题与面试题的采分核心</text>
+  <text x="24" y="52" font-size="11.5" fill="#64748b">左边是客户给的约束，右边是因此必须改变的方案；答题时说出「如果不这样会怎样」</text>
+
+  <!-- 表头 -->
+  <text x="24" y="84" font-size="11.5" font-weight="700" fill="#64748b">约束（客户给的）</text>
+  <text x="400" y="84" font-size="11.5" font-weight="700" fill="#64748b">设计必须反转成</text>
+  <line x1="24" y1="92" x2="656" y2="92" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- 行 -->
+  <g font-size="11">
+    <rect x="24" y="100" width="300" height="34" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+    <text x="38" y="122" fill="#991b1b">数据不能出内网</text>
+    <line x1="330" y1="117" x2="390" y2="117" stroke="#94a3b8" stroke-width="1.1" marker-end="url(#a37)"/>
+    <rect x="396" y="100" width="260" height="34" rx="6" fill="#f0fdf4" stroke="#bbf7d0"/>
+    <text x="410" y="122" fill="#166534">私有化 + 量化 + 功能降级预案</text>
+
+    <rect x="24" y="144" width="300" height="34" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+    <text x="38" y="166" fill="#991b1b">有严格密级 / 条线权限</text>
+    <line x1="330" y1="161" x2="390" y2="161" stroke="#94a3b8" stroke-width="1.1" marker-end="url(#a37)"/>
+    <rect x="396" y="144" width="260" height="34" rx="6" fill="#f0fdf4" stroke="#bbf7d0"/>
+    <text x="410" y="166" fill="#166534">检索「前」按权限过滤（pre-filter）</text>
+
+    <rect x="24" y="188" width="300" height="34" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+    <text x="38" y="210" fill="#991b1b">同一制度存在多个版本</text>
+    <line x1="330" y1="205" x2="390" y2="205" stroke="#94a3b8" stroke-width="1.1" marker-end="url(#a37)"/>
+    <rect x="396" y="188" width="260" height="34" rx="6" fill="#f0fdf4" stroke="#bbf7d0"/>
+    <text x="410" y="210" fill="#166534">版本字段 + 默认只检索现行 + 标注</text>
+
+    <rect x="24" y="232" width="300" height="34" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+    <text x="38" y="254" fill="#991b1b">内容有强标识符（型号/条号）</text>
+    <line x1="330" y1="249" x2="390" y2="249" stroke="#94a3b8" stroke-width="1.1" marker-end="url(#a37)"/>
+    <rect x="396" y="232" width="260" height="34" rx="6" fill="#f0fdf4" stroke="#bbf7d0"/>
+    <text x="410" y="254" fill="#166534">先抽标识符硬过滤，再做语义检索</text>
+
+    <rect x="24" y="276" width="300" height="34" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+    <text x="38" y="298" fill="#991b1b">内容是结构化（代码/表格/条款）</text>
+    <line x1="330" y1="293" x2="390" y2="293" stroke="#94a3b8" stroke-width="1.1" marker-end="url(#a37)"/>
+    <rect x="396" y="276" width="260" height="34" rx="6" fill="#f0fdf4" stroke="#bbf7d0"/>
+    <text x="410" y="298" fill="#166534">结构感知切分（AST / 按条 / 整表）</text>
+
+    <rect x="24" y="320" width="300" height="34" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+    <text x="38" y="342" fill="#991b1b">存在写操作（下单/退款/派单）</text>
+    <line x1="330" y1="337" x2="390" y2="337" stroke="#94a3b8" stroke-width="1.1" marker-end="url(#a37)"/>
+    <rect x="396" y="320" width="260" height="34" rx="6" fill="#f0fdf4" stroke="#bbf7d0"/>
+    <text x="410" y="342" fill="#166534">工具分级 + 幂等 + 二次确认 + 审计</text>
+
+    <rect x="24" y="364" width="300" height="34" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+    <text x="38" y="386" fill="#991b1b">硬件只能用国产卡</text>
+    <line x1="330" y1="381" x2="390" y2="381" stroke="#94a3b8" stroke-width="1.1" marker-end="url(#a37)"/>
+    <rect x="396" y="364" width="260" height="34" rx="6" fill="#f0fdf4" stroke="#bbf7d0"/>
+    <text x="410" y="386" fill="#166534">先做 4 周适配验证 + 性能兜底方案</text>
+
+    <rect x="24" y="408" width="300" height="34" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+    <text x="38" y="430" fill="#991b1b">零差错要求（医疗 / 金融）</text>
+    <line x1="330" y1="425" x2="390" y2="425" stroke="#94a3b8" stroke-width="1.1" marker-end="url(#a37)"/>
+    <rect x="396" y="408" width="260" height="34" rx="6" fill="#f0fdf4" stroke="#bbf7d0"/>
+    <text x="410" y="430" fill="#166534">提高拒答阈值 + 强制引用 + 人审</text>
+  </g>
+
+  <!-- 底部提示 -->
+  <rect x="24" y="462" width="632" height="44" rx="8" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1.2"/>
+  <text x="40" y="482" font-size="11" fill="#3730a3">答题公式：识别约束（20%）→ 方案分层（25%）→ 设计反转 + 理由（30%）→ 指标可测（15%）→ 风险兜底（10%）</text>
+  <text x="40" y="499" font-size="10.5" fill="#4338ca">只会背方案的人拿不到「反转」那 30% —— 因为「好」是相对于约束的，不是绝对的</text>
+
+  <text x="24" y="530" font-size="10.5" fill="#94a3b8">图 33-1　约束到设计反转映射（章号对应正文第 33 章）</text>
+</svg>

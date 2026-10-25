@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 500" width="680" height="500" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="a38" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="680" height="500" fill="#fbfcfe"/>
+  <text x="24" y="32" font-size="17" font-weight="700" fill="#1e293b">FDE 面试四轮：每轮筛的不是同一件事</text>
+  <text x="24" y="52" font-size="11.5" fill="#64748b">核心筛选点只有两个字：判断力。所以每轮都在问「为什么这么做」</text>
+
+  <!-- 四轮漏斗 -->
+  <rect x="60" y="80" width="560" height="70" rx="9" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.3"/>
+  <text x="80" y="104" font-size="13" font-weight="700" fill="#3730a3">一轮 · 技术基础　筛：是不是真懂</text>
+  <text x="80" y="124" font-size="10.5" fill="#334155">追问式问答 + 现场算数（显存 / 并发 / 成本）　　淘汰率 ≈40%</text>
+  <text x="80" y="141" font-size="10.5" fill="#b45309">准备：把 24.8 的 KV 计算、43 的指标基准背到能心算</text>
+
+  <rect x="96" y="162" width="488" height="70" rx="9" fill="#ecfeff" stroke="#67e8f9" stroke-width="1.3"/>
+  <text x="116" y="186" font-size="13" font-weight="700" fill="#155e75">二轮 · 项目深挖　筛：是不是真做过</text>
+  <text x="116" y="206" font-size="10.5" fill="#334155">讲一个项目，连环追问「为什么不用 XX」「约束变了怎么办」　淘汰率 ≈40%</text>
+  <text x="116" y="223" font-size="10.5" fill="#b45309">准备：C-S-D-R（约束 20% / 方案 25% / 决策 35% / 结果 20%）</text>
+
+  <rect x="132" y="244" width="416" height="70" rx="9" fill="#f0fdf4" stroke="#86efac" stroke-width="1.3"/>
+  <text x="152" y="268" font-size="13" font-weight="700" fill="#166534">三轮 · 方案场景　筛：能不能面对客户</text>
+  <text x="152" y="288" font-size="10.5" fill="#334155">面试官扮演客户，给一个模糊需求　　淘汰率 ≈30%</text>
+  <text x="152" y="305" font-size="10.5" fill="#b45309">隐藏评分点：先问约束，还是先讲方案</text>
+
+  <rect x="168" y="326" width="344" height="70" rx="9" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.3"/>
+  <text x="188" y="350" font-size="13" font-weight="700" fill="#92400e">四轮 · 软素质　筛：能不能扛</text>
+  <text x="188" y="370" font-size="10.5" fill="#334155">出差 / 驻场、抗压、跨部门沟通　　淘汰率 ≈20%</text>
+  <text x="188" y="387" font-size="10.5" fill="#b45309">含糊其辞 = 扣分；明确表态 + 已有安排 = 加分</text>
+
+  <!-- 右侧注释 -->
+  <line x1="626" y1="115" x2="656" y2="115" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="660" y="118" font-size="10" fill="#94a3b8" text-anchor="end"> </text>
+
+  <!-- 场景题六步 -->
+  <rect x="60" y="416" width="560" height="58" rx="9" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="76" y="436" font-size="11.5" font-weight="700" fill="#1e293b">场景题六步（先问后讲，顺序不能乱）</text>
+  <text x="76" y="456" font-size="10.5" fill="#334155">① 谁在用　② 现在这步怎么做　③ 错一次的代价　④ 能否出网 / 扫描件比例　⑤ 时间与预算　⑥ 本期做 / 不做</text>
+  <text x="76" y="470" font-size="10" fill="#b45309">六步走完再讲方案，方案自然带上约束理由——这正是面试官想听的</text>
+
+  <text x="24" y="492" font-size="10.5" fill="#94a3b8">图 38-1　面试四轮与场景题六步（章号对应正文第 38 章）</text>
+</svg>

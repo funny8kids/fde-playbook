@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',sans-serif">
+  <rect x="0" y="0" width="760" height="460" fill="#ffffff"/>
+  <text x="380" y="28" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">GraphRAG：当答案藏在「关系」里</text>
+
+  <!-- left: vector RAG limit -->
+  <rect x="20" y="46" width="352" height="200" rx="10" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="196" y="70" font-size="12" font-weight="bold" fill="#b91c1c" text-anchor="middle">纯向量 RAG 的盲区</text>
+  <text x="40" y="96" font-size="11" fill="#7f1d1d">问题：「A 公司的供应商，哪些也供过 B 项目？」</text>
+  <text x="40" y="120" font-size="11" fill="#7f1d1d">· 需要跨多份文档做「实体关联」</text>
+  <text x="40" y="142" font-size="11" fill="#7f1d1d">· 需要聚合统计（多少家、占比多少）</text>
+  <text x="40" y="164" font-size="11" fill="#7f1d1d">· 需要全局视角（这批文档讲了哪些主题）</text>
+  <text x="40" y="192" font-size="11" fill="#b91c1c">向量检索只能召回「相似片段」，</text>
+  <text x="40" y="212" font-size="11" fill="#b91c1c">拼不出跨文档的关系网络。</text>
+
+  <!-- right: graph -->
+  <rect x="388" y="46" width="352" height="200" rx="10" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <text x="564" y="70" font-size="12" font-weight="bold" fill="#15803d" text-anchor="middle">图谱化：实体 + 关系 + 社区</text>
+  <circle cx="470" cy="120" r="20" fill="#16a34a"/>
+  <text x="470" y="124" font-size="10" fill="#ffffff" text-anchor="middle">A公司</text>
+  <circle cx="560" cy="98" r="16" fill="#4ade80"/>
+  <text x="560" y="102" font-size="9" fill="#14532d" text-anchor="middle">供应商1</text>
+  <circle cx="600" cy="140" r="16" fill="#4ade80"/>
+  <text x="600" y="144" font-size="9" fill="#14532d" text-anchor="middle">供应商2</text>
+  <circle cx="520" cy="180" r="18" fill="#22c55e"/>
+  <text x="520" y="184" font-size="9" fill="#ffffff" text-anchor="middle">B项目</text>
+  <circle cx="660" cy="100" r="16" fill="#86efac"/>
+  <text x="660" y="104" font-size="9" fill="#14532d" text-anchor="middle">合同C</text>
+  <line x1="490" y1="116" x2="544" y2="102" stroke="#15803d" stroke-width="1.5"/>
+  <line x1="490" y1="124" x2="584" y2="138" stroke="#15803d" stroke-width="1.5"/>
+  <line x1="474" y1="138" x2="508" y2="168" stroke="#15803d" stroke-width="1.5"/>
+  <line x1="574" y1="106" x2="644" y2="100" stroke="#15803d" stroke-width="1.5"/>
+  <line x1="534" y1="170" x2="590" y2="148" stroke="#15803d" stroke-width="1.5"/>
+  <text x="564" y="222" font-size="10" fill="#166534" text-anchor="middle">从图中做多跳查询：A→供应商→B项目</text>
+
+  <!-- build pipeline -->
+  <rect x="20" y="258" width="720" height="90" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="36" y="282" font-size="12" font-weight="bold" fill="#1e40af">建图流程</text>
+  <text x="36" y="306" font-size="11" fill="#334155">文档 → LLM 抽取（实体/关系/属性）→ 实体消歧与合并 → 入图数据库 → 社区检测（聚类）→ 生成社区摘要</text>
+  <text x="36" y="328" font-size="10" fill="#64748b">代价：抽取要跑一遍全量 LLM，成本高、周期长；适合「关系密集、需要全局问题」的场景</text>
+
+  <!-- when to use -->
+  <rect x="20" y="360" width="352" height="88" rx="10" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <text x="40" y="384" font-size="12" font-weight="bold" fill="#15803d">适合 GraphRAG</text>
+  <text x="40" y="406" font-size="11" fill="#14532d">风控关联、供应链、案件串并、组织人事、</text>
+  <text x="40" y="426" font-size="11" fill="#14532d">「这批文件讲了什么主题」类全局问题。</text>
+
+  <rect x="388" y="360" width="352" height="88" rx="10" fill="#fff7ed" stroke="#fed7aa"/>
+  <text x="408" y="384" font-size="12" font-weight="bold" fill="#9a3412">不必用 GraphRAG</text>
+  <text x="408" y="406" font-size="11" fill="#7c2d12">制度问答、手册查询这类「单点事实」问题，</text>
+  <text x="408" y="426" font-size="11" fill="#7c2d12">向量 + 重排已经够，上图谱是过度设计。</text>
+</svg>

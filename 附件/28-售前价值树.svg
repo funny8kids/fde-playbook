@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="'PingFang SC','Microsoft YaHei','Hiragino Sans GB',sans-serif">
+  <rect x="0" y="0" width="760" height="440" fill="#ffffff"/>
+  <text x="380" y="28" font-size="16" font-weight="bold" fill="#1e293b" text-anchor="middle">售前价值树：把「AI 很厉害」翻译成「一年省 480 万」</text>
+
+  <!-- root -->
+  <rect x="280" y="46" width="200" height="44" rx="22" fill="#1e293b"/>
+  <text x="380" y="73" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">业务目标：降本 / 增效 / 控险</text>
+
+  <line x1="380" y1="90" x2="380" y2="108" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="140" y1="108" x2="620" y2="108" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="140" y1="108" x2="140" y2="126" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="380" y1="108" x2="380" y2="126" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="620" y1="108" x2="620" y2="126" stroke="#64748b" stroke-width="1.5"/>
+
+  <!-- three branches -->
+  <rect x="40" y="126" width="200" height="40" rx="8" fill="#2563eb"/>
+  <text x="140" y="151" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">降本</text>
+  <rect x="280" y="126" width="200" height="40" rx="8" fill="#0d9488"/>
+  <text x="380" y="151" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">增效</text>
+  <rect x="520" y="126" width="200" height="40" rx="8" fill="#ea580c"/>
+  <text x="620" y="151" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">控险</text>
+
+  <!-- leaves -->
+  <text x="40" y="192" font-size="10" fill="#334155">· 人力替代：6 人 × 8 万 = 48 万/年</text>
+  <text x="40" y="212" font-size="10" fill="#334155">· 培训周期缩短：新人 2 月 → 1 月</text>
+  <text x="40" y="232" font-size="10" fill="#334155">· 重复劳动减少：工单量降 35%</text>
+
+  <text x="280" y="192" font-size="10" fill="#334155">· 响应速度：15 分钟 → 40 秒</text>
+  <text x="280" y="212" font-size="10" fill="#334155">· 一次解决率：45% → 72%</text>
+  <text x="280" y="232" font-size="10" fill="#334155">· 决策周期：从「等专家」到「即时」</text>
+
+  <text x="520" y="192" font-size="10" fill="#334155">· 合规风险：条款答错导致处罚</text>
+  <text x="520" y="212" font-size="10" fill="#334155">· 知识流失：老师傅退休带走经验</text>
+  <text x="520" y="232" font-size="10" fill="#334155">· 审计留痕：可追溯、可举证</text>
+
+  <!-- formula -->
+  <rect x="20" y="258" width="720" height="86" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="40" y="282" font-size="12" font-weight="bold" fill="#1e40af">价值量化三步</text>
+  <text x="40" y="306" font-size="11" fill="#334155">① 找到可计量的基线（人数、时长、单量、差错率）→ ② 估算改善幅度（保守/中性/乐观）→ ③ 折算成钱并给回收期</text>
+  <text x="40" y="330" font-size="11" fill="#1e40af">年收益 = 人力节省 + 效率折算 + 风险损失下降；回收期 = 投入 ÷（年收益 − 年运营成本）</text>
+
+  <!-- warning -->
+  <rect x="20" y="356" width="720" height="70" rx="10" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="40" y="380" font-size="12" font-weight="bold" fill="#b91c1c">三个不要</text>
+  <text x="40" y="402" font-size="11" fill="#7f1d1d">不要用行业平均值替代客户真实数字；不要只算省钱不算投入；不要承诺「一定达到」——给区间，留余地。</text>
+  <text x="40" y="420" font-size="10" fill="#64748b">客户 CFO 只信两件事：这个数怎么来的，以及如果达不到怎么办。</text>
+</svg>
